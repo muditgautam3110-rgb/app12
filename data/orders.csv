@@ -1,0 +1,9 @@
+order_id,customer_id,order_date,amount,description
+O-1001,C-101,2026-10-01,125.50,Keyboard
+O-1002,C-102,2026-10-01,80.00,Mouse
+O-1003,C-101,2026-10-02,45.25,"USB cable, 2m"
+O-1004,C-103,2026-10-02,310.00,Monitor
+O-1005,C-102,2026-10-03,25.00,sample order with zero amount
+O-1006,C-104,2026-10-03,-50.00,sample order with negative amount
+O-1007,C-103,2026-10-03,90.00,item with a very long description that exceeds the maximum length allowed for the description field in the database schema, which should be limited to 255 characters. This is a test case to ensure that the import function correctly rejects rows with descriptions that are too long and does not insert them into the database.
+O-1008,C-101,2026-10-04,20.00,Notebook

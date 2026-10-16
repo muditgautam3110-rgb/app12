@@ -1,0 +1,8 @@
+services:
+  orderly:
+    # TODO: build the local image, mount ./data read-only, and persist ./output.
+    build: .
+    command: ["python", "-m", "orderly.cli", "--input", "/input/orders.csv", "--db", "/output/orders.db", "--report", "/output/report.json"]
+    volumes:
+      - ./data:/input:ro
+      - ./output:/output
